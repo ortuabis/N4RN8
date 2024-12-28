@@ -3,38 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .content {
-            text-align: center;
-        }
-        .content img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-        }
-    </style>
+    <title>Redirect Page</title>
     <script>
-        setTimeout(() => {
-            window.location.href = "https://linktr.ee/cammeana"; // Cambia con il tuo URL
-        }, 2000); // Reindirizza dopo 2 secondi
+        // Function to redirect to another page and close the current tab
+        function redirectAndClose() {
+            // Replace 'URL_HERE' with your desired URL
+            window.location.href = 'https://linktr.ee/cammeana';
+            // This might not work in all browsers due to security restrictions
+            setTimeout(() => window.close(), 100); // Close after x milliseconds
+        }
     </script>
 </head>
-<body>
-    <div class="background">
-        <p>Grazie per averci scelto</p>
-        <!-- Sostituisci l'URL dell'immagine qui sotto con il tuo -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Nolza.jpg/1200px-Nolza.jpg" alt="Loading image" />
-    </div>
+<body onload="redirectAndClose()">
+    <p>Grazie per averci scelto!</p>
 </body>
 </html>
