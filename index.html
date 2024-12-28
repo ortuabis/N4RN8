@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .content {
+            text-align: center;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
     <script>
-        window.location.href = "https://linktr.ee/cammeana";
+        setTimeout(() => {
+            window.location.href = "https://example.com"; // Cambia con il tuo URL
+        }, 2000); // Reindirizza dopo 2 secondi
     </script>
 </head>
 <body>
+    <div class="content">
+        <p>Redirecting...</p>
+        <!-- Sostituisci l'URL dell'immagine qui sotto con il tuo -->
+        <img src="https://via.placeholder.com/300" alt="Loading image" />
+    </div>
 </body>
 </html>
