@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirect Page</title>
-    <script>
-        // Function to redirect to another page and close the current tab
-        function redirectAndClose() {
-            // Replace 'URL_HERE' with your desired URL
-            window.location.href = 'https://linktr.ee/cammeana';
-            // This might not work in all browsers due to security restrictions
-            setTimeout(() => window.close(), 150); // Close after 150 milliseconds
+    <!-- Meta tag for immediate redirection -->
+    <meta http-equiv="refresh" content="0; url=https://linktr.ee/cammeana">
+    <style>
+        body {
+            background-color: #FFFFFF; /* colore del linktree */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+    </style>
+    <script>
+        // Function to close the window after redirection
+        function closeWindow() {
+            try {
+                window.open('', '_self', '');
+                window.close();
+            } catch (e) {
+                console.error("Could not close the window due to browser restrictions.");
+            }
+        }
+        // Call closeWindow after 1 second to allow for redirection to occur
+        setTimeout(closeWindow, 175);
     </script>
 </head>
-<body onload="redirectAndClose()">
-    <p>Grazie per averci scelto!</p>
+<body>
+    <p>Redirecting...</p>
 </body>
 </html>
